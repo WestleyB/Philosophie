@@ -1,0 +1,103 @@
+body {
+  background-color: black;
+}
+
+h1 {
+  color: #00994C;
+  text-align: center;
+}
+
+h2 {
+  color: lightgreen;
+  text-align: center;
+}
+
+h2 a:link , a:visited {
+  color: lightgreen;
+  text-decoration: none;
+}
+
+h2 a:hover {
+    color: green;
+    opacity: 0.6;
+}
+
+div {
+  background-color: black;
+  color: white;
+  table-layout: center;
+  margin: 0 auto;
+  width: 30%;
+  border: 1px solid green;
+  content: center;
+  padding: 1%;
+  border-collapse: collapse;
+}
+
+table {
+  border-collapse: collapse;
+  width: 30%;
+  margin: 2% auto;
+  padding: 1%
+  content: center;
+  text-align: justify;
+  text-justify: inter-word;
+}
+
+label {
+  color: #E5FFCC;
+  ext-align: center;
+}
+
+label:hover {
+  color: green;
+}
+
+#query {
+  width: 100%;
+  background-color: #202020;
+  border: 1px solid #336600;
+  color: #66FF66;
+}
+
+input.radio {
+  background-color: #CCFFFF;
+  color: blue;
+}
+
+button {
+  table-layout: center;
+  width: 100%;
+  margin: 5% auto;
+  box-align:center;
+  background-color: #E0E0E0;
+  font-weight: bold;
+}
+
+button:hover {
+  color: green;
+  background-color: #CCFFE5;
+  opacity: 0.8;
+}
+
+ul.flashes {
+  list-style-type:none;
+  font-weight: bold;
+  text-align: center;
+  border-collapse: collapse;
+}
+
+.flashes li.other {
+  color: yellow;
+  text-align: center;
+}
+
+.flashes li.lose {
+  color: red;
+  text-align: center;
+}
+
+.flashes li.win {
+  color: #00CC00;
+  text-align: center;
+}

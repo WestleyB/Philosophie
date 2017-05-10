@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="/static/style.css">
+    <title>Tous les chemins mènent à la philosophie</title>
+  </head>
+  <body>
+    <h1> Philosophy Game [Score : {{ session.score }}] </h1>
+    {% block body %}
+      {# Début du bloc "body", dont vous devez modifier le contenu #}
+      <div>
+      <form action="/new-game" method="post">
+        <label for="query">Start here :</label>
+        <input type="text" name="query" id="query"/>
+        <table><button>Search</button> </table>
+      </form>
+      </div>
+      {# Fin du bloc "body" #}
+    {% endblock %}
+    <title>GAME OVER</title>
+    {% with messages = get_flashed_messages(with_categories=True) %}
+      {% if messages %}
+        <ul class=flashes>
+        {% for category, message in messages %}
+          <li class="{{ category }}">{{ message }} </li>
+        {% endfor %}
+        </ul>
+      {% endif %}
+    {% endwith %}
+  </body>
+</html>

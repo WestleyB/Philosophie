@@ -1,0 +1,17 @@
+{% extends "index.html" %}
+{% block body %}
+<div>
+<form action="/move" method="post">
+  <h2><a href="/"> {{ session.title }} </a></h2>
+  {% for item in session.content %}
+    <table>
+      <label for='id{{ loop.index }}'>
+      <input class="radio" type="radio" name="selected" value={{ loop.index }}
+        id='id{{ loop.index }}' {%if loop.first%} checked {%endif%} > {{ item }}
+    </table>
+  {% endfor %}
+  <table><button> Submit </button></table>
+  <input type="hidden" name="current_score" value={{ session.score }}>
+</form>
+</div>
+{% endblock %}
